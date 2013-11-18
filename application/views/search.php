@@ -32,9 +32,10 @@
 
 <div id="container">
 	<h1>Welcome to cutelobby</h1>
-
+        <h3>hello, <?php echo $user_data['user_first_name'];?> </h3>
+        <h3><a href="<?php echo base_url('user/logout');?>">Logout</a> </h3>
             <?php
-            session_destroy();
+            $_SESSION['current_search']=NULL;
             $attributes = array('class' => 'hotelsearch', 'id' => 'hotelsearchform');
             echo form_open($action,$attributes);
     //location feild

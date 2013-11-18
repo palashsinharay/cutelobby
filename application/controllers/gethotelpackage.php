@@ -170,7 +170,14 @@ class Gethotelpackage extends CI_Controller {
 
         public function search() {
             $data['action'] = 'gethotelpackage/index'; 
-            $this->load->view('search',$data);
+                 if($_SESSION['LOGGEDIN_USER']['user_data']['is_logged_in']==1)
+                    {
+                        $data['user_data']=$_SESSION['LOGGEDIN_USER']['user_data'];
+                        $this->load->view('search',$data);
+                    }
+                    else {
+                            echo "please login to continue !";
+                    }
         }
         function dateDiff ($d1, $d2) {
         // Return the number of days between the two dates:

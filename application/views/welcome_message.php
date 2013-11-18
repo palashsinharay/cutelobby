@@ -65,10 +65,12 @@
 	</style>
 </head>
 <body>
-
+  <a href="<?php echo base_url('user/registration');?>"> Registration</a> 
+    <a href="<?php echo base_url('user/login');?>"> Login</a>
 <div id="container">
+     
 	<h1>Welcome to CodeIgniter!</h1>
-
+ 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 
